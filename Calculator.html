@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>HTML Calculator</title> 
+
+	<!-- For styling -->
+	<style> 
+		table { 
+			border: 5px solid rgb(247, 5, 166); 
+			margin-left: auto; 
+			margin-right: auto; 
+		} 
+		
+		input[type="button"] { 
+			width: 100%; 
+			padding: 20px 40px; 
+			background-color:  rgb(100, 206, 224); 
+			color: white; 
+			font-size: 24px; 
+			font-weight: bold; 
+			border: 3px solid blueviolet; 
+			border-radius: 5px; 
+		} 
+		
+		input[type="text"] { 
+			padding: 20px 30px; 
+			font-size: 24px; 
+			font-weight: bold; 
+			border: none; 
+			border-radius: 5px; 
+			border: 3px solid black; 
+		} 
+	</style> 
+</head> 
+
+<body> 
+
+	<!-- Create table -->
+	<table id="calcu"> 
+		<tr> 
+            <form name = "form1"> 
+			<td colspan="3"> 
+				<input type="text" id="answer"> 
+			</td> 
+			<td><input type="button" value="c" onclick =  "form1.answer.value = '' "></td> 
+		</tr> 
+
+		<tr> 
+			<td><input type="button" value="1" onclick = "form1.answer.value += '1' " ></td> 
+			<td><input type="button" value="2" onclick = "form1.answer.value += '2' " ></td> 
+			<td><input type="button" value="3" onclick = "form1.answer.value += '3' " ></td> 
+			<td><input type="button" value="/" onclick = "form1.answer.value += '/' " ></td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="4" onclick = "form1.answer.value += '4' " ></td> 
+			<td><input type="button" value="5" onclick = "form1.answer.value += '5' " ></td> 
+			<td><input type="button" value="6" onclick = "form1.answer.value += '6' " ></td> 
+			<td><input type="button" value="*" onclick = "form1.answer.value += '*' "></td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="7" onclick = "form1.answer.value += '7' " ></td> 
+			<td><input type="button" value="8" onclick = "form1.answer.value += '8' " ></td> 
+			<td><input type="button" value="9" onclick = "form1.answer.value += '9' " ></td> 
+			<td><input type="button" value="-" onclick = "form1.answer.value += '-' " ></td> 
+		</tr> 
+		<tr> 
+			<td><input type="button" value="0" onclick = "form1.answer.value += '0' " ></td> 
+			<td><input type="button" value="." onclick = "form1.answer.value += '.' " ></td> 
+			<td><input type="button" value="=" onclick = "form1.answer.value = eval(form1.answer.value)  " ></td> 
+			<td><input type="button" value="+" onclick = "form1.answer.value += '+' " ></td> 
+		</tr> 
+        </form>
+	</table> 
+</body> 
+
+</html> 
